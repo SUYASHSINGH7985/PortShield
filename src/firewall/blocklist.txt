@@ -1,0 +1,7 @@
+# PortShield Blocklist
+# Updated: Initial setup
+# Format: one IP per line
+# Lines starting with # are comments
+
+# This file is managed by PortShield
+# Do not edit manually while PortShield is running

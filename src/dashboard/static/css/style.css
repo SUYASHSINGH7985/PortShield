@@ -1,0 +1,247 @@
+/* PortShield Dashboard Styles */
+
+:root {
+    --primary-color: #1e40af;
+    --danger-color: #dc2626;
+    --warning-color: #f59e0b;
+    --success-color: #16a34a;
+    --dark-bg: #0f172a;
+    --card-bg: #1e293b;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Cards */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning-color) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+/* Tables */
+.table {
+    color: #e2e8f0;
+    margin-bottom: 0;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.table thead th {
+    border-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.table tbody td {
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+}
+
+/* Badges */
+.badge-blocked {
+    background-color: var(--danger-color);
+}
+
+.badge-threat {
+    background-color: var(--warning-color);
+    color: #000;
+}
+
+.badge-safe {
+    background-color: var(--success-color);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #1e3a8a;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: #d97706;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+/* Input Groups */
+.input-group {
+    gap: 0.5rem;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e2e8f0;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    color: #e2e8f0;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animation */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Alert Box */
+.alert {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e2e8f0;
+}
+
+.alert-danger {
+    background-color: rgba(220, 38, 38, 0.1);
+    border-color: var(--danger-color);
+}
+
+.alert-success {
+    background-color: rgba(22, 163, 74, 0.1);
+    border-color: var(--success-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card h2 {
+        font-size: 2rem;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Icons */
+.fa-shield-alt::before {
+    color: var(--primary-color);
+}
+
+i {
+    margin-right: 0.5rem;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-online {
+    background-color: var(--success-color);
+    box-shadow: 0 0 10px var(--success-color);
+}
+
+.status-offline {
+    background-color: var(--danger-color);
+}
+
+.status-warning {
+    background-color: var(--warning-color);
+}
